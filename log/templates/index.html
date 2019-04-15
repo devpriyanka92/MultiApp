@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block content %}
+	<p>User is logged in successfully</p>
+	<body><center><b>Welcome !</b></center>
+	<form method="POST" style="margin:auto;background-color:#00897b;width: 350px;padding: 20px;border-radius: 5px;margin-top: 50px;color: white;height: 250px;">
+		{% csrf_token %}
+		{{form.as_p}}
+		<h2>Features List</h2>
+		<center><button type="submit" value="chat"><a href="{% url 'chat' %}" style="text-decoration: none;color:#00897b; ">Chat</a></button></center>
+		<center><button>Lets Play Quize</button></center>
+		<center><button>Fashion</button></center>
+		<center><button type="submit" value="logout"><a href="{% url 'login' %}" style="text-decoration: none;color:#00897b; ">Logout</button></center>
+	</form>
+	<style>
+		button
+		{
+			width: 200px;
+			height: 30px;
+			color: #00897b;
+			background: white;
+			margin-top: 10px;
+			display: block;
+			cursor: pointer;
+			font-size:15px;
+		}
+	</style>
+</body>
+{% endblock content %}

@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Log In</title>
+</head>
+<body style="padding-top:40px;"><center><b>Welcome In Login Page :</b></center>
+	<form method="POST" style="margin:auto;background-color:#00897b;width: 300px;padding: 20px;border-radius: 5px;margin-top: 50px;color: white;height: 220px;" url="{% url 'login' %}">
+		{% csrf_token %}
+		{{form.as_p}}
+
+		<center><input type="submit" value='login' style="width: 100px;height: 30px;margin-top:20px;border-radius: 2px;color: green;background-color:white;border: none;display: block;cursor: pointer;" /></center>
+	</form>
+</body>
+</html>

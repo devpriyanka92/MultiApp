@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% block content %}
+	<p>User is logged in successfully</p>
+	<body><center><b>Welcome !</b></center>
+	<form method="POST" style="margin:auto;background-color:#00897b;width:400px;padding: 20px;border-radius: 5px;margin-top: 50px;color: white;height: 300px;" action="{% url 'chat' %}">
+		{% csrf_token %}
+		{{form.as_p}}
+		<h2>Welcome In Chatting Page !</h2>
+		<center><button type="submit" value="back"><a href="" style="text-decoration: none;color:#00897b; ">Back</a></button></center>
+	</form>
+	<style>
+		button
+		{
+			width: 200px;
+			height: 30px;
+			color: #00897b;
+			background: white;
+			margin-top: 10px;
+			display: block;
+			cursor: pointer;
+			font-size:15px;
+		}
+	</style>
+</body>
+{% endblock content %}
